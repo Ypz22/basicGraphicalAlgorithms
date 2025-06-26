@@ -8,7 +8,6 @@ namespace DrawLines
 {
     public class AlgorithmCircumference
     {
-        public event Action<int, int> OnDrawPoint;
 
         private float mXc;
         private float mYc;

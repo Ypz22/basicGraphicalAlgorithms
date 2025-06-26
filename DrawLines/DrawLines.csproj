@@ -47,65 +47,95 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlgorithmDDA.cs" />
-    <Compile Include="AlgorithmBresenham.cs" />
-    <Compile Include="AlgorithmCircumference.cs" />
-    <Compile Include="FrmAlgorithmDDA.cs">
+    <Compile Include="Logic\AlgorithmCohenShutterland.cs" />
+    <Compile Include="Logic\AlgorithmDDA.cs" />
+    <Compile Include="Logic\AlgorithmBresenham.cs" />
+    <Compile Include="Logic\AlgorithmCircumference.cs" />
+    <Compile Include="Logic\AlgoritmoSutherlanHodgman.cs" />
+    <Compile Include="Logic\CurvasBezier.cs" />
+    <Compile Include="UI\FrmAlgorithmCohenShutterland.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAlgorithmDDA.Designer.cs">
+    <Compile Include="UI\FrmAlgorithmCohenShutterland.Designer.cs">
+      <DependentUpon>FrmAlgorithmCohenShutterland.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmAlgorithmDDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmAlgorithmDDA.Designer.cs">
       <DependentUpon>FrmAlgorithmDDA.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAlgorithmBresenham.cs">
+    <Compile Include="UI\FrmAlgorithmBresenham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAlgorithmBresenham.Designer.cs">
+    <Compile Include="UI\FrmAlgorithmBresenham.Designer.cs">
       <DependentUpon>FrmAlgorithmBresenham.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAlgorithmCircumference.cs">
+    <Compile Include="UI\FrmAlgorithmCircumference.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAlgorithmCircumference.Designer.cs">
+    <Compile Include="UI\FrmAlgorithmCircumference.Designer.cs">
       <DependentUpon>FrmAlgorithmCircumference.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPadding.cs">
+    <Compile Include="UI\FrmAlgorithmSutherlandHodgman.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPadding.Designer.cs">
+    <Compile Include="UI\FrmAlgorithmSutherlandHodgman.Designer.cs">
+      <DependentUpon>FrmAlgorithmSutherlandHodgman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmBezierAnimado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmBezierAnimado.Designer.cs">
+      <DependentUpon>FrmBezierAnimado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmPadding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmPadding.Designer.cs">
       <DependentUpon>FrmPadding.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPaddingNSides.cs">
+    <Compile Include="UI\FrmPaddingNSides.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPaddingNSides.Designer.cs">
+    <Compile Include="UI\FrmPaddingNSides.Designer.cs">
       <DependentUpon>FrmPaddingNSides.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMenu.cs">
+    <Compile Include="UI\FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMenu.Designer.cs">
+    <Compile Include="UI\FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Padding.cs" />
-    <Compile Include="PaddingNSides.cs" />
-    <EmbeddedResource Include="FrmAlgorithmDDA.resx">
+    <Compile Include="Logic\Padding.cs" />
+    <Compile Include="Logic\PaddingNSides.cs" />
+    <EmbeddedResource Include="UI\FrmAlgorithmCohenShutterland.resx">
+      <DependentUpon>FrmAlgorithmCohenShutterland.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmAlgorithmDDA.resx">
       <DependentUpon>FrmAlgorithmDDA.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAlgorithmBresenham.resx">
+    <EmbeddedResource Include="UI\FrmAlgorithmBresenham.resx">
       <DependentUpon>FrmAlgorithmBresenham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAlgorithmCircumference.resx">
+    <EmbeddedResource Include="UI\FrmAlgorithmCircumference.resx">
       <DependentUpon>FrmAlgorithmCircumference.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPadding.resx">
+    <EmbeddedResource Include="UI\FrmAlgorithmSutherlandHodgman.resx">
+      <DependentUpon>FrmAlgorithmSutherlandHodgman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmBezierAnimado.resx">
+      <DependentUpon>FrmBezierAnimado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmPadding.resx">
       <DependentUpon>FrmPadding.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPaddingNSides.resx">
+    <EmbeddedResource Include="UI\FrmPaddingNSides.resx">
       <DependentUpon>FrmPaddingNSides.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMenu.resx">
+    <EmbeddedResource Include="UI\FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

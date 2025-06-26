@@ -91,13 +91,6 @@ namespace DrawLines
             FloodFill(x - 1, y, targetColor); 
         }
 
-        public float CalculateAngle()
-        {
-            float angulo = 360 / nSide;
-            return angulo;
-        }
-
-
         public void PlotShape(PictureBox picCanvas)
         {
             int width = picCanvas.Width;
