@@ -17,7 +17,7 @@ namespace DrawLines
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmBezierAnimado());
+            Application.Run(new Prueba());
         }
     }
 }
