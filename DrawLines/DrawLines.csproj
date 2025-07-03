@@ -47,12 +47,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Logic\AlgorithmCohenShutterland.cs" />
-    <Compile Include="Logic\AlgorithmDDA.cs" />
-    <Compile Include="Logic\AlgorithmBresenham.cs" />
-    <Compile Include="Logic\AlgorithmCircumference.cs" />
-    <Compile Include="Logic\AlgoritmoSutherlanHodgman.cs" />
-    <Compile Include="Logic\CurvasBezier.cs" />
+    <Compile Include="Logic\AlgorithmGeometricCutout\AlgorithmCohenShutterland.cs" />
+    <Compile Include="Logic\AlgorithmParametricCurves\AlgorithmBSpine.cs" />
+    <Compile Include="Logic\AlgorithmRegionFilling\AlgorithmScaline.cs" />
+    <Compile Include="Logic\AlgorithmsLinesAndCurves\AlgorithmBresenhamElipse.cs" />
+    <Compile Include="Logic\AlgorithmsLinesAndCurves\AlgorithmDDA.cs" />
+    <Compile Include="Logic\AlgorithmsLinesAndCurves\AlgorithmBresenham.cs" />
+    <Compile Include="Logic\AlgorithmsLinesAndCurves\AlgorithmCircumference.cs" />
+    <Compile Include="Logic\AlgorithmGeometricCutout\AlgoritmoSutherlanHodgman.cs" />
+    <Compile Include="Logic\AlgorithmParametricCurves\AlgorithmCurveBezier.cs" />
+    <Compile Include="UI\FrmAlgorithmBresenhamElipse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmAlgorithmBresenhamElipse.Designer.cs">
+      <DependentUpon>FrmAlgorithmBresenhamElipse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmAlgorithmBSplines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmAlgorithmBSplines.Designer.cs">
+      <DependentUpon>FrmAlgorithmBSplines.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FrmAlgorithmCohenShutterland.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,17 +92,41 @@
     <Compile Include="UI\FrmAlgorithmCircumference.Designer.cs">
       <DependentUpon>FrmAlgorithmCircumference.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FrmAlgorithmScanline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmAlgorithmScanline.Designer.cs">
+      <DependentUpon>FrmAlgorithmScanline.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FrmAlgorithmSutherlandHodgman.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\FrmAlgorithmSutherlandHodgman.Designer.cs">
       <DependentUpon>FrmAlgorithmSutherlandHodgman.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\FrmBezierAnimado.cs">
+    <Compile Include="UI\FrmAlgorithmBezier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\FrmBezierAnimado.Designer.cs">
-      <DependentUpon>FrmBezierAnimado.cs</DependentUpon>
+    <Compile Include="UI\FrmAlgorithmBezier.Designer.cs">
+      <DependentUpon>FrmAlgorithmBezier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmMenuGeometricCutout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmMenuGeometricCutout.Designer.cs">
+      <DependentUpon>FrmMenuGeometricCutout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmMenuLines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmMenuLines.Designer.cs">
+      <DependentUpon>FrmMenuLines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmMenuParametricCurves.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmMenuParametricCurves.Designer.cs">
+      <DependentUpon>FrmMenuParametricCurves.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FrmPadding.cs">
       <SubType>Form</SubType>
@@ -109,20 +148,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Logic\Padding.cs" />
-    <Compile Include="Logic\PaddingNSides.cs" />
-    <Compile Include="UI\Prueba.cs">
+    <Compile Include="Logic\AlgorithmRegionFilling\Padding.cs" />
+    <Compile Include="Logic\AlgorithmRegionFilling\PaddingNSides.cs" />
+    <Compile Include="UI\FrmMenuRegionFilling.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Prueba.Designer.cs">
-      <DependentUpon>Prueba.cs</DependentUpon>
+    <Compile Include="UI\FrmMenuRegionFilling.Designer.cs">
+      <DependentUpon>FrmMenuRegionFilling.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Prueba1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Prueba1.Designer.cs">
-      <DependentUpon>Prueba1.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="UI\FrmAlgorithmBresenhamElipse.resx">
+      <DependentUpon>FrmAlgorithmBresenhamElipse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmAlgorithmBSplines.resx">
+      <DependentUpon>FrmAlgorithmBSplines.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmAlgorithmCohenShutterland.resx">
       <DependentUpon>FrmAlgorithmCohenShutterland.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,11 +174,26 @@
     <EmbeddedResource Include="UI\FrmAlgorithmCircumference.resx">
       <DependentUpon>FrmAlgorithmCircumference.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmAlgorithmScanline.resx">
+      <DependentUpon>FrmAlgorithmScanline.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmAlgorithmSutherlandHodgman.resx">
       <DependentUpon>FrmAlgorithmSutherlandHodgman.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\FrmBezierAnimado.resx">
-      <DependentUpon>FrmBezierAnimado.cs</DependentUpon>
+    <EmbeddedResource Include="UI\FrmAlgorithmBezier.resx">
+      <DependentUpon>FrmAlgorithmBezier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmMenuGeometricCutout.resx">
+      <DependentUpon>FrmMenuGeometricCutout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmMenuLines.resx">
+      <DependentUpon>FrmMenuLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmMenuParametricCurves.resx">
+      <DependentUpon>FrmMenuParametricCurves.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmMenuRegionFilling.resx">
+      <DependentUpon>FrmMenuRegionFilling.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmPadding.resx">
       <DependentUpon>FrmPadding.cs</DependentUpon>
@@ -159,12 +213,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UI\Prueba.resx">
-      <DependentUpon>Prueba.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Prueba1.resx">
-      <DependentUpon>Prueba1.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

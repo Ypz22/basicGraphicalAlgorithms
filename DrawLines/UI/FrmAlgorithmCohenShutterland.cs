@@ -15,6 +15,20 @@ namespace DrawLines.UI
     public partial class FrmAlgorithmCohenShutterland : Form
     {
 
+        private static FrmAlgorithmCohenShutterland _instance;
+
+        public static FrmAlgorithmCohenShutterland Instance
+        {
+            get
+            {
+                if (_instance == null || _instance.IsDisposed)
+                {
+                    _instance = new FrmAlgorithmCohenShutterland();
+                }
+                return _instance;
+            }
+        }
+
         private Point? startPoint = null;
         private Point? endPoint = null;
 

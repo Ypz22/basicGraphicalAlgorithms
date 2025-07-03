@@ -38,13 +38,10 @@
             this.btnPadding = new System.Windows.Forms.Button();
             this.gbCicunferenceB = new System.Windows.Forms.GroupBox();
             this.btnCircunferenceBresenham = new System.Windows.Forms.Button();
-            this.lbPaddingNSides = new System.Windows.Forms.GroupBox();
-            this.btnNSidesPadding = new System.Windows.Forms.Button();
             this.gbDiferentialAnalyzer.SuspendLayout();
             this.gbBresenham.SuspendLayout();
             this.gbPadding.SuspendLayout();
             this.gbCicunferenceB.SuspendLayout();
-            this.lbPaddingNSides.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbTitle
@@ -70,11 +67,11 @@
             this.gbDiferentialAnalyzer.Size = new System.Drawing.Size(466, 262);
             this.gbDiferentialAnalyzer.TabIndex = 1;
             this.gbDiferentialAnalyzer.TabStop = false;
-            this.gbDiferentialAnalyzer.Text = "Algorithm DDA";
+            this.gbDiferentialAnalyzer.Text = "Algorithm Lines and Curves";
             // 
             // btnDDA
             // 
-            this.btnDDA.Location = new System.Drawing.Point(91, 114);
+            this.btnDDA.Location = new System.Drawing.Point(91, 136);
             this.btnDDA.Name = "btnDDA";
             this.btnDDA.Size = new System.Drawing.Size(255, 81);
             this.btnDDA.TabIndex = 0;
@@ -91,11 +88,11 @@
             this.gbBresenham.Size = new System.Drawing.Size(466, 262);
             this.gbBresenham.TabIndex = 2;
             this.gbBresenham.TabStop = false;
-            this.gbBresenham.Text = "Algorithm Bresenham";
+            this.gbBresenham.Text = "Algorithms Region Filling";
             // 
             // btnBresenham
             // 
-            this.btnBresenham.Location = new System.Drawing.Point(110, 157);
+            this.btnBresenham.Location = new System.Drawing.Point(110, 136);
             this.btnBresenham.Name = "btnBresenham";
             this.btnBresenham.Size = new System.Drawing.Size(255, 81);
             this.btnBresenham.TabIndex = 1;
@@ -112,11 +109,11 @@
             this.gbPadding.Size = new System.Drawing.Size(466, 294);
             this.gbPadding.TabIndex = 4;
             this.gbPadding.TabStop = false;
-            this.gbPadding.Text = "Padding algorithm";
+            this.gbPadding.Text = "Algorithms Parametric Curves";
             // 
             // btnPadding
             // 
-            this.btnPadding.Location = new System.Drawing.Point(110, 177);
+            this.btnPadding.Location = new System.Drawing.Point(110, 163);
             this.btnPadding.Name = "btnPadding";
             this.btnPadding.Size = new System.Drawing.Size(255, 81);
             this.btnPadding.TabIndex = 2;
@@ -133,12 +130,12 @@
             this.gbCicunferenceB.Size = new System.Drawing.Size(466, 294);
             this.gbCicunferenceB.TabIndex = 3;
             this.gbCicunferenceB.TabStop = false;
-            this.gbCicunferenceB.Text = "Algorithm Bresenham Circumference";
+            this.gbCicunferenceB.Text = "Algorithms Geometric Cutout";
             // 
             // btnCircunferenceBresenham
             // 
-            this.btnCircunferenceBresenham.Font = new System.Drawing.Font("MV Boli", 21.85714F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCircunferenceBresenham.Location = new System.Drawing.Point(91, 187);
+            this.btnCircunferenceBresenham.Font = new System.Drawing.Font("MV Boli", 15.85714F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCircunferenceBresenham.Location = new System.Drawing.Point(91, 163);
             this.btnCircunferenceBresenham.Name = "btnCircunferenceBresenham";
             this.btnCircunferenceBresenham.Size = new System.Drawing.Size(255, 81);
             this.btnCircunferenceBresenham.TabIndex = 2;
@@ -146,34 +143,12 @@
             this.btnCircunferenceBresenham.UseVisualStyleBackColor = true;
             this.btnCircunferenceBresenham.Click += new System.EventHandler(this.btnCircunferenceBresenham_Click);
             // 
-            // lbPaddingNSides
-            // 
-            this.lbPaddingNSides.Controls.Add(this.btnNSidesPadding);
-            this.lbPaddingNSides.Font = new System.Drawing.Font("MV Boli", 15.85714F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPaddingNSides.Location = new System.Drawing.Point(1148, 406);
-            this.lbPaddingNSides.Name = "lbPaddingNSides";
-            this.lbPaddingNSides.Size = new System.Drawing.Size(466, 294);
-            this.lbPaddingNSides.TabIndex = 5;
-            this.lbPaddingNSides.TabStop = false;
-            this.lbPaddingNSides.Text = "Padding N Sides algorithm";
-            // 
-            // btnNSidesPadding
-            // 
-            this.btnNSidesPadding.Location = new System.Drawing.Point(110, 177);
-            this.btnNSidesPadding.Name = "btnNSidesPadding";
-            this.btnNSidesPadding.Size = new System.Drawing.Size(255, 81);
-            this.btnNSidesPadding.TabIndex = 2;
-            this.btnNSidesPadding.Text = "Enter";
-            this.btnNSidesPadding.UseVisualStyleBackColor = true;
-            this.btnNSidesPadding.Click += new System.EventHandler(this.btnNSidesPadding_Click);
-            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1626, 976);
-            this.Controls.Add(this.lbPaddingNSides);
             this.Controls.Add(this.gbPadding);
             this.Controls.Add(this.gbBresenham);
             this.Controls.Add(this.gbCicunferenceB);
@@ -185,7 +160,6 @@
             this.gbBresenham.ResumeLayout(false);
             this.gbPadding.ResumeLayout(false);
             this.gbCicunferenceB.ResumeLayout(false);
-            this.lbPaddingNSides.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,7 +176,5 @@
         private System.Windows.Forms.Button btnBresenham;
         private System.Windows.Forms.Button btnPadding;
         private System.Windows.Forms.Button btnCircunferenceBresenham;
-        private System.Windows.Forms.GroupBox lbPaddingNSides;
-        private System.Windows.Forms.Button btnNSidesPadding;
     }
 }

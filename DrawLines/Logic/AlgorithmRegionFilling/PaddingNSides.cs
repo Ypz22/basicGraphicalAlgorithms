@@ -15,7 +15,7 @@ namespace DrawLines
         private List<PointF> PointsList;
         private int nSide;
         private Graphics mGraph;
-        private const float SF = 5;
+        private const float SF = 2;
         private Pen mPen;
 
         private Bitmap canvas;

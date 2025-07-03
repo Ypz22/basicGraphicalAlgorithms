@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DrawLines.Logic
 {
-    public class CurvasBezier
+    public class AlgorithmCurveBezier
     {
         public List<PointF> PuntosControl { get; private set; } = new List<PointF>();
         public List<PointF> CurvaGenerada { get; private set; } = new List<PointF>();
@@ -15,7 +15,7 @@ namespace DrawLines.Logic
         public float tActual { get; private set; } = 0;
         public float PasoT { get; set; } = 0.01f;
 
-        public CurvasBezier()
+        public AlgorithmCurveBezier()
         {
             Reset();
         }
@@ -56,7 +56,6 @@ namespace DrawLines.Logic
 
             float t = tActual;
 
-            // De Casteljau
             PointF A = Lerp(P0, P1, t);
             PointF B = Lerp(P1, P2, t);
             PointF C = Lerp(P2, P3, t);

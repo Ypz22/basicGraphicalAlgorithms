@@ -9,7 +9,7 @@ namespace DrawLines
     public class Padding
     {
         private float side;
-        private const float SF = 20;
+        private const float SF = 10;
         private Pen mPen;
 
         private Bitmap canvas;

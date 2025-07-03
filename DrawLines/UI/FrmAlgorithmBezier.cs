@@ -11,12 +11,26 @@ using DrawLines.Logic;
 
 namespace DrawLines.UI
 {
-    public partial class FrmBezierAnimado : Form
+    public partial class FrmAlgorithmBezier : Form
     {
-        private CurvasBezier curva = new CurvasBezier();
+
+        private static FrmAlgorithmBezier _instance;
+
+        public static FrmAlgorithmBezier Instance
+        {
+            get
+            {
+                if (_instance == null || _instance.IsDisposed)
+                {
+                    _instance = new FrmAlgorithmBezier();
+                }
+                return _instance;
+            }
+        }
+        private AlgorithmCurveBezier curva = new AlgorithmCurveBezier();
         private Timer animacion;
 
-        public FrmBezierAnimado()
+        public FrmAlgorithmBezier()
         {
             InitializeComponent();
 

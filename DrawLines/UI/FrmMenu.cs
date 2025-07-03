@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using DrawLines.UI;
 
 namespace DrawLines
 {
@@ -13,7 +14,7 @@ namespace DrawLines
         private void btnDDA_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmAlgorithmDDA frm = FrmAlgorithmDDA.Instance;
+            FrmMenuLines frm = FrmMenuLines.Instance;
             frm.FormClosed += (s, args) => this.Show();
             frm.Show();
         }
@@ -21,7 +22,7 @@ namespace DrawLines
         private void btnBresenham_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmAlgorithmBresenham frm = FrmAlgorithmBresenham.Instance;
+            FrmMenuRegionFilling frm = FrmMenuRegionFilling.Instance;
             frm.FormClosed += (s, args) => this.Show();
             frm.Show();
         }
@@ -29,7 +30,7 @@ namespace DrawLines
         private void btnCircunferenceBresenham_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmAlgorithmCircumference frm = FrmAlgorithmCircumference.Instance;
+            FrmMenuGeometricCutout frm = FrmMenuGeometricCutout.Instance;
             frm.FormClosed += (s, args) => this.Show();
             frm.Show();
         }
@@ -37,17 +38,10 @@ namespace DrawLines
         private void btnPadding_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmPadding frm = FrmPadding.Instance;
+            FrmMenuParametricCurves frm = FrmMenuParametricCurves.Instance;
             frm.FormClosed += (s, args) => this.Show();
             frm.Show();
         }
 
-        private void btnNSidesPadding_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrmPaddingNSides frm = FrmPaddingNSides.Instance;
-            frm.FormClosed += (s, args) => this.Show();
-            frm.Show();
-        }
     }
 }

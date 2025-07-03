@@ -14,6 +14,21 @@ namespace DrawLines.UI
 {
     public partial class FrmAlgorithmSutherlandHodgman : Form
     {
+
+        private static FrmAlgorithmSutherlandHodgman _instance;
+
+        public static FrmAlgorithmSutherlandHodgman Instance
+        {
+            get
+            {
+                if (_instance == null || _instance.IsDisposed)
+                {
+                    _instance = new FrmAlgorithmSutherlandHodgman();
+                }
+                return _instance;
+            }
+        }
+
         private List<Point> polygon = new List<Point>();
         private Rectangle rectClip;
         private bool mostrarRecorte = false;
